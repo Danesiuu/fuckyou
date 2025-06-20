@@ -29,7 +29,7 @@ if ! is_license_valid; then
     ERROR_COUNT=$(cat "$ERROR_FILE")
     ERROR_COUNT=$((ERROR_COUNT + 1))
     echo "$ERROR_COUNT" > "$ERROR_FILE"
-    if [[ $ERROR_COUNT -ge 3 ]]; then
+    if [[ $ERROR_COUNT -ge 5 ]]; then
         echo -e "\033[31mLisensi tidak valid atau belum dimasukkan! Anda telah gagal 3 kali. Anda akan logout.\033[0m"
         for i in 3 2 1; do
             echo "$i"
